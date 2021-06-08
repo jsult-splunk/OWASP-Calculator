@@ -72,7 +72,7 @@
             <div class="h6 nomargin col-4 d-flex align-items-center" title="How large is this group of threat agents?">Size</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="s" name="s" onchange="calculate()">
-                <option value="2">Developers, System administrators (2)</option>
+                <option value="2">Developers and/or system administrators (2)</option>
                 <option value="4">Intranet users (4)</option>
                 <option value="5">Partners (5)</option>
                 <option value="6">Authenticated users (6)</option>
@@ -89,11 +89,12 @@
             <div class="h6 nomargin col-4 d-flex align-items-center" title="How much data could be disclosed and how sensitive is it?">Loss of confidentiality</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="lc" name="lc" onchange="calculate()">
+                <option value="0">N/A (0)</option>
                 <option value="2">Minimal non-sensitive data disclosed (2)</option>
-                <option value="6">minimal critical data disclosed (6)</option>
-                <option value="6">extensive non-sensitive data disclosed (6)</option>
-                <option value="7">extensive critical data disclosed (7)</option>
-                <option value="9">all data disclosed (9)</option>
+                <option value="6">Minimal critical data disclosed (6)</option>
+                <option value="6">Extensive non-sensitive data disclosed (6)</option>
+                <option value="7">Extensive critical data disclosed (7)</option>
+                <option value="9">All data disclosed (9)</option>
               </select>
             </div>
           </div>
@@ -101,6 +102,7 @@
             <div class="h6 nomargin col-4 d-flex align-items-center" title="How much data could be corrupted and how damaged is it?">Loss of integrity</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="li" name="li" onchange="calculate()">
+                <option value="0">N/A (0)</option>
                 <option value="1">Minimal slightly corrupt data (1)</option>
                 <option value="3">Minimal seriously corrupt data (3)</option>
                 <option value="5">Extensive slightly corrupt data (5)</option>
@@ -113,6 +115,7 @@
             <div class="h6 nomargin col-4 d-flex align-items-center" title="How much service could be lost and how vital is it?">Loss of availability</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="lav" name="lav" onchange="calculate()">
+                <option value="0">N/A (0)</option>
                 <option value="1">Minimal secondary services interrupted (1)</option>
                 <option value="5">Minimal primary services interrupted (5)</option>
                 <option value="5">Extensive secondary services interrupted (5)</option>
@@ -176,10 +179,10 @@
             <div class="h6 nomargin col-4 d-flex align-items-center" title="How likely is an exploit to be detected?">Intrusion detection</div>
             <div class="col-8">
               <select class="form-control" aria-label=".form-select-sm example" id="id" name="id" onchange="calculate()">
-                <option value="1">Active Detection in Application (1)</option>
-                <option value="3">Logged and Reviewed (3)</option>
-                <option value="8">Logged Without Review (8)</option>
-                <option value="9">Not Logged (9)</option>
+                <option value="1">Active detection in application (1)</option>
+                <option value="3">Logged and reviewed (3)</option>
+                <option value="8">Logged without review (8)</option>
+                <option value="9">Not logged (9)</option>
               </select>
             </div>
           </div>
@@ -255,7 +258,7 @@
         <div>
           <b>VECTOR: </b><a id="score" href="https://jsult-splunk.github.io/OWASP-Calculator/?vector=(SL:1/M:1/O:0/S:2/ED:1/EE:1/A:1/ID:2/LC:2/LI:1/LAV:1/LAC:1/FD:1/RD:1/NC:2/PV:3)" target="_blank">(SL:1/M:1/O:0/S:2/ED:1/EE:1/A:1/ID:2/LC:2/LI:1/LAV:1/LAC:1/FD:1/RD:1/NC:2/PV:3)</a>
           <br>
-          <a href="#exampleModalCenter" data-toggle="modal">How is Severity Risk caculated?</a>
+          <a href="#exampleModalCenter" data-toggle="modal">How is Risk Severity caculated?</a>
           <br>
           2021 OWASP Risk Assessment Calculator | Developed by <a href="https://hackpuntes.com" target="_blank"><span>Javier Olmedo</span></a> | Source Code on <a href="https://github.com/JavierOlmedo/OWASP-Calculator" target="_blank"><span>Github</span></a> repository.
         </div>
@@ -267,7 +270,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">How is Severity Risk caculated?</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">How is Risk Severity caculated?</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
